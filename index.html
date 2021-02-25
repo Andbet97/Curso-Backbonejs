@@ -7,21 +7,18 @@
 	<link href='css/bootstrap/bootstrap.min.css' rel='stylesheet' type='text/css'>
 	
 </head>
-<body>
+<body id="app">
 
-	<p>Bienvenidos al Curso básico de Backbone.js</p>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-8 col-offset-2">
-				<div class="vista">
-					<div class="cambiarColor">Cambiar color del texto</div>
-				</div>
-			</div>
-		</div>
+	<div class="libros">
+		<h1>Lista de libros:</h1>
 	</div>
 
-	<small>Producido por @Devcodela</small>
+	<script type="text/template" id="tplMostrarLibro">
+		<h2><%= titulo %></h2>
+		<p><%= autor %></p>
+		<small><%= categoria %></small>
+		<hr>
+	</script>
 
 	<script src="js/vendor/jquery-3.5.1.min.js"></script>
 	<script src="js/vendor/bootstrap/bootstrap.min.js"></script>
@@ -30,5 +27,6 @@
 
 	<script src="js/backbone/models/libro.js"></script>
 	<script src="js/backbone/views/libreria.js"></script>
+	<script src="js/backbone/collections/libros.js"></script>
 </body>
 </html>
